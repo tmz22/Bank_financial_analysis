@@ -15,12 +15,12 @@ with open(election_data,"") as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
     csv_header = next(csvreader)
 
-    for row in csvreader:
+        #for row in csvreader:
         
         #vote-counter 
         total_votes += 1  
          #Testing code   
-         #if row[2] not in candidates:
+        if row[2] not in candidates:
             candidates.append(row[2])
             index = candidates.index(row[2])
             num_votes.append(1)
@@ -28,32 +28,32 @@ with open(election_data,"") as csvfile:
             index = candidates.index(row[2])
             num_votes[index] += 1
     
-    #List of percent votes
-    for votes in num_votes:
+        #List of percent votes
+        for votes in num_votes:
          percent_votes.append(percentage)
-        percentage = (votes/total_votes) * 100
+         percentage = (votes/total_votes) * 100
 
-     for row in csvreader:
-        candidate=row[2]
+        for row in csvreader:
+         candidate=row[2]
         
         if candidate in candidates:
-            vote_counter[candidate]+=1
+         vote_counter[candidate]+=1
         else:
-            candidates.append(candidate)
-            vote_counter[candidate]=1
-        total_votes+=1
-    #Testing code
-    for i in range(len(candidates)):
-	#vote_share = round((vote_counter[candidates[i]]/total_votes)*100, 3)
-	#vote_percentage.append(vote_share)
+         candidates.append(candidate)
+         vote_counter[candidate]=1
+         total_votes+=1
+        #Testing code
+        for i in range(len(candidates)):
+	     vote_share = round((vote_counter[candidates[i]]/total_votes)*100, 3)
+	     vote_percentage.append(vote_share)
 
-	if vote_counter[candidates[i]] > max_vote:
-		max_vote = vote_counter[candidates[i]]
-		winner = candidates[i]   
+	    if vote_counter[candidates[i]] > max_vote:
+		 max_vote = vote_counter[candidates[i]]
+		 winner = candidates[i]   
 
-#Winner
-    winner = max(number_votes)
-    winner_candidate = candidates[index]
+        #Winner
+         winner = max(number_votes)
+         winner_candidate = candidates[index]
 
 #Results
 print("Election Results")
