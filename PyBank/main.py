@@ -49,6 +49,11 @@ with open(budget_path) as csvfile:
     lg_dec_mnth = monthly_rev_change.index(largest_decrease)
     largest_decrease_month = month[lg_dec_mnth]
    
+# Determine the greatest monthly decrease change amount, and identify month
+    largest_decrease = min(monthly_rev_change)
+    
+    lg_dec_mnth = monthly_rev_change.index(largest_decrease)
+    largest_decrease_month = month[lg_dec_mnth]   
   
 # Print Results on Terminal
 print("Financial Analysis")
