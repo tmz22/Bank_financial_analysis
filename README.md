@@ -1,6 +1,6 @@
 # Python - PyBank, PyPoll
 
-## Background
+## 
 
 Well... you've made it!
 
