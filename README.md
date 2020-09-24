@@ -1,4 +1,4 @@
-# Python - PyBank Up, Charlie
+# Python - PyBank, Charlie
 
 ## Background
 
