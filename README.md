@@ -1,4 +1,4 @@
-# Python - PyBank, Py
+# Python - PyBank, PyPoll
 
 ## Background
 
