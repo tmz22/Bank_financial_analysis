@@ -9,7 +9,7 @@ Both of these challenges encompasses a real-world situation where your newfound 
 
 ### Before You Begin
 
-1. Create a new repository for this project called `python-challenge`. **Do not add this homework to an existing repository**.
+1. Create a new repository for this project called `python-challenge`. 
 
 2. Clone the new repository to your computer.
 
